@@ -3,7 +3,7 @@ name: daily run
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 13 * * *"
+    - cron: "0 0 * * *"
 
 jobs:
   build-and-execute:
@@ -33,7 +33,7 @@ jobs:
 
       - name: Execute
         run: |
-          RANDOM_SEC=$((RANDOM % 14400))
+          RANDOM_SEC=$((RANDOM % 7200))
 
           TIME="$(TZ="Asia/Shanghai" date -d "-$RANDOM_SEC seconds" +"%Y-%m-%d %H:%M:%S")"
 
