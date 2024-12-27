@@ -62,7 +62,7 @@ const HEADERS: [(HeaderName, &str); 9] = [
 ];
 
 const CALORIE_PER_MILEAGE: f64 = 58.3;
-const PACE: f64 = 360.;
+const PACE: f64 = 600.;
 const PACE_RANGE: f64 = 0.6;
 
 fn format_json<T: Serialize>(json: T) -> Result<String, Box<dyn Error>> {
